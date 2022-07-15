@@ -27,7 +27,7 @@ public class QueryProcessor {
                 arrayInt[i] = Integer.parseInt(arrayS[i]);
             }
 
-            int largest = -10000;
+            int largest = Integer.MIN_VALUE;
             for(int i = 0; i < arrayInt.length; i++){
                 if (arrayInt[i] > largest) {
                     largest = arrayInt[i];
