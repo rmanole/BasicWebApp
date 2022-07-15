@@ -12,9 +12,33 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
-           return "MyTeam";
-        } else { // TODO extend the programm here
+           return "AnkaraMessi";
+
+        }
+        // TODO extend the programm here
+        else if(query.contains("plus")){
             return "";
         }
+        else if(query.contains("largest")){
+            String [] arrayS = query.split(",");
+            int [] arrayInt = new int[arrayS.length];
+
+            for(int i = 0; i < arrayInt.length; i++){
+                arrayInt[i] = Integer.parseInt(arrayS[i]);
+            }
+
+            int largest = -10000;
+            for(int i = 0; i < arrayInt.length; i++){
+                if (arrayInt[i] > largest) {
+                    largest = arrayInt[i];
+                }
+            }
+            return Integer.toString(largest);
+        }
+        else { // TODO extend the programm here
+
+            return "";
+        }
+
     }
 }
